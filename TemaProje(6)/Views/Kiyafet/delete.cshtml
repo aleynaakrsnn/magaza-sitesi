@@ -1,0 +1,60 @@
+﻿
+@model TemaProje_6_.Models.Kiyafet
+@{
+
+
+    @{
+        ViewBag.Title = "View";
+        Layout = "delete";
+    }
+
+    <h2>View</h2>
+
+    <h3>silmek istediğinize emin misiniz?</h3>
+    <div>
+        <h4>Kıyafet</h4>
+        <hr />
+        <dl class=" =d1-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.KiyafetAdi)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.KiyafetAdi)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.KiyafetKodu)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.KiyafetKodu)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.KumasTipi)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.KumasTipi)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cinsiyet)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Cinsiyet)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Fiyat)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Fiyat)
+            </dd>
+
+
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="from actions no-color">
+                <input type="submit" value="Delete" class="btn btn-primary" />
+                @Html.ActionLink("Anasayfa", "ındex", null, new { @class = "btn btn-primary" })
+            </div>
+        }
+    </div>
+

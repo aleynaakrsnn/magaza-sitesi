@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AvmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ayakkabi">
+          <Key>
+            <PropertyRef Name="AyakkabiNo" />
+          </Key>
+          <Property Name="AyakkabiNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AyakkabiAdi" Type="varchar" MaxLength="50" />
+          <Property Name="AyakkabiKodu" Type="int" />
+          <Property Name="AyakkabiRengi" Type="varchar" MaxLength="50" />
+          <Property Name="Fiyat" Type="int" />
+        </EntityType>
+        <EntityType Name="Canta">
+          <Key>
+            <PropertyRef Name="CantaNo" />
+          </Key>
+          <Property Name="CantaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CantaAdi" Type="varchar" MaxLength="50" />
+          <Property Name="CantaKodu" Type="int" />
+          <Property Name="CantaRengi" Type="varchar" MaxLength="50" />
+          <Property Name="Fiyat" Type="int" />
+        </EntityType>
+        <EntityType Name="EvYasam">
+          <Key>
+            <PropertyRef Name="UrunNo" />
+          </Key>
+          <Property Name="UrunNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UrunAdi" Type="varchar" MaxLength="50" />
+          <Property Name="UrunKodu" Type="int" />
+          <Property Name="Fiyat" Type="int" />
+          <Property Name="Kategori" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Kiyafet">
+          <Key>
+            <PropertyRef Name="KiyafetNo" />
+          </Key>
+          <Property Name="KiyafetNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KiyafetAdi" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="KiyafetKodu" Type="int" />
+          <Property Name="KumasTipi" Type="varchar" MaxLength="50" />
+          <Property Name="Cinsiyet" Type="varchar" MaxLength="50" />
+          <Property Name="Fiyat" Type="int" />
+        </EntityType>
+        <EntityType Name="Sube">
+          <Key>
+            <PropertyRef Name="SubeNo" />
+          </Key>
+          <Property Name="SubeNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubeAdi" Type="varchar" MaxLength="50" />
+          <Property Name="SubeAdresi" Type="varchar" MaxLength="50" />
+          <Property Name="SubeIl" Type="varchar" MaxLength="50" />
+          <Property Name="SubeIlce" Type="varchar" MaxLength="50" />
+          <Property Name="CalisanSayisi" Type="int" />
+          <Property Name="Ciro" Type="int" />
+        </EntityType>
+        <EntityContainer Name="AvmModelStoreContainer">
+          <EntitySet Name="Ayakkabi" EntityType="Self.Ayakkabi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Canta" EntityType="Self.Canta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EvYasam" EntityType="Self.EvYasam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kiyafet" EntityType="Self.Kiyafet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sube" EntityType="Self.Sube" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AvmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Ayakkabi">
+          <Key>
+            <PropertyRef Name="AyakkabiNo" />
+          </Key>
+          <Property Name="AyakkabiNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AyakkabiAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AyakkabiKodu" Type="Int32" />
+          <Property Name="AyakkabiRengi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fiyat" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Canta">
+          <Key>
+            <PropertyRef Name="CantaNo" />
+          </Key>
+          <Property Name="CantaNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CantaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CantaKodu" Type="Int32" />
+          <Property Name="CantaRengi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fiyat" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EvYasam">
+          <Key>
+            <PropertyRef Name="UrunNo" />
+          </Key>
+          <Property Name="UrunNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UrunAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UrunKodu" Type="Int32" />
+          <Property Name="Fiyat" Type="Int32" />
+          <Property Name="Kategori" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Kiyafet">
+          <Key>
+            <PropertyRef Name="KiyafetNo" />
+          </Key>
+          <Property Name="KiyafetNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KiyafetAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KiyafetKodu" Type="Int32" />
+          <Property Name="KumasTipi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cinsiyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fiyat" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Sube">
+          <Key>
+            <PropertyRef Name="SubeNo" />
+          </Key>
+          <Property Name="SubeNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubeAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubeAdresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubeIl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubeIlce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CalisanSayisi" Type="Int32" />
+          <Property Name="Ciro" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="AvmEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ayakkabi" EntityType="Self.Ayakkabi" />
+          <EntitySet Name="Canta" EntityType="Self.Canta" />
+          <EntitySet Name="EvYasam" EntityType="Self.EvYasam" />
+          <EntitySet Name="Kiyafet" EntityType="Self.Kiyafet" />
+          <EntitySet Name="Sube" EntityType="Self.Sube" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AvmModelStoreContainer" CdmEntityContainer="AvmEntities">
+          <EntitySetMapping Name="Ayakkabi">
+            <EntityTypeMapping TypeName="AvmModel.Ayakkabi">
+              <MappingFragment StoreEntitySet="Ayakkabi">
+                <ScalarProperty Name="AyakkabiNo" ColumnName="AyakkabiNo" />
+                <ScalarProperty Name="AyakkabiAdi" ColumnName="AyakkabiAdi" />
+                <ScalarProperty Name="AyakkabiKodu" ColumnName="AyakkabiKodu" />
+                <ScalarProperty Name="AyakkabiRengi" ColumnName="AyakkabiRengi" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Canta">
+            <EntityTypeMapping TypeName="AvmModel.Canta">
+              <MappingFragment StoreEntitySet="Canta">
+                <ScalarProperty Name="CantaNo" ColumnName="CantaNo" />
+                <ScalarProperty Name="CantaAdi" ColumnName="CantaAdi" />
+                <ScalarProperty Name="CantaKodu" ColumnName="CantaKodu" />
+                <ScalarProperty Name="CantaRengi" ColumnName="CantaRengi" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EvYasam">
+            <EntityTypeMapping TypeName="AvmModel.EvYasam">
+              <MappingFragment StoreEntitySet="EvYasam">
+                <ScalarProperty Name="UrunNo" ColumnName="UrunNo" />
+                <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+                <ScalarProperty Name="UrunKodu" ColumnName="UrunKodu" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+                <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kiyafet">
+            <EntityTypeMapping TypeName="AvmModel.Kiyafet">
+              <MappingFragment StoreEntitySet="Kiyafet">
+                <ScalarProperty Name="KiyafetNo" ColumnName="KiyafetNo" />
+                <ScalarProperty Name="KiyafetAdi" ColumnName="KiyafetAdi" />
+                <ScalarProperty Name="KiyafetKodu" ColumnName="KiyafetKodu" />
+                <ScalarProperty Name="KumasTipi" ColumnName="KumasTipi" />
+                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sube">
+            <EntityTypeMapping TypeName="AvmModel.Sube">
+              <MappingFragment StoreEntitySet="Sube">
+                <ScalarProperty Name="SubeNo" ColumnName="SubeNo" />
+                <ScalarProperty Name="SubeAdi" ColumnName="SubeAdi" />
+                <ScalarProperty Name="SubeAdresi" ColumnName="SubeAdresi" />
+                <ScalarProperty Name="SubeIl" ColumnName="SubeIl" />
+                <ScalarProperty Name="SubeIlce" ColumnName="SubeIlce" />
+                <ScalarProperty Name="CalisanSayisi" ColumnName="CalisanSayisi" />
+                <ScalarProperty Name="Ciro" ColumnName="Ciro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
